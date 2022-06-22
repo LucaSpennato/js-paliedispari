@@ -11,7 +11,7 @@ function palindromeTester(wordToTest){
     wordArray.push(wordToTest);
     return ( `${wordArray}`);
 
-    // rompo la parola in più pezzi (trovato il metodo .split())
+    // rompo la parola in più pezzi SENZA METODO SPLIT
     // in un for, riordino la parola al contrario, eseguo quindi il for con i--
     // salvo le lettere in un secondo array
     // unisco le parole in un'unica stringa
@@ -20,5 +20,9 @@ function palindromeTester(wordToTest){
 
 }
 
-let result = palindromeTester('ciaoasdasdasd');
-console.log(result);
+// let result = palindromeTester(userWord);
+// console.log(result);
+
+
+let ciao = 'ciao';
+console.log(ciao[0])
