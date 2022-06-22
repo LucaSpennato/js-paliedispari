@@ -8,12 +8,12 @@
 
 function evenOrOdd(selectedEO, numbers){
 
-    if(((selectedEO) === ('pari')) && !(numbers % 2))/*&& ((numbers) === ((numbers % 2) && (isNan(numbers))))*/{
+    if(((selectedEO) === ('pari')) && (!(numbers % 2) && !(isNaN(numbers)) ) ){
         return 1;
-    } else if ((selectedEO) === ('dispari') && (numbers % 2)){
+    } else if ((selectedEO) === ('dispari') && ((numbers % 2)) && !(isNaN(numbers)) ){
         return 2;
     } else{
-        return 3;
+        return 'Hai sbagliato ad inserire qualocosa, inserisci pari ed un numero pari, se dispari un numero dispari!';
     }
     
     
