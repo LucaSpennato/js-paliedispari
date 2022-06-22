@@ -15,34 +15,32 @@
 
     function palindromeTester(wordToTest){
     
-        
-    
         // salvo la parola in una stringa
         // in un for, riordino la parola al contrario, eseguo quindi il for con i--
         // cosa gli stiamo dicendo? Gli diciamo di partire dall'ultimo elemento dell''''''array''''' della stringa
         // successivamente, gli diciamo di decrescere index-- e di fermarsi a 0. NB: >0 O SI FERMERà AL NUMERO 1 E TE MANCA UN ELEMENTO
-        let sum = '';
+        let reversedWord = '';
         for (let index = wordToTest.length-1; index >= 0; index--) {
-            const element = wordToTest[index];
+            // const element = wordToTest[index];
             // console.log(element);
-    
             // unisco le parole in un'unica stringa
-            sum += wordToTest[index];
-            
+            reversedWord += wordToTest[index];
         }
     
-        console.log(sum);
+        console.log(reversedWord);
     
-    
+        let resultTest = false;
         // faccio una comparazione tra la parola iniziale nel primo array ed il secondo
-        if(wordToTest === sum){
-            return ('uguali');
-        } else{
-            return ('diverse');
+        if(wordToTest === reversedWord){
+            resultTest = true;
         }
-        
         // se la parola è uguale, return di 'è palindroma', oppure return di 'true' da con altro if
-    
+        if (resultTest === true){
+            return `${wordToTest} è palindroma!`;
+        } else{
+            return `${reversedWord} non è il contrario di ${wordToTest}!`
+        }
+
     }
     
     let result = palindromeTester(userWord);
