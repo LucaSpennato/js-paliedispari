@@ -11,7 +11,7 @@
     // ma come? le stringhe possono essere divise come un array? A quanto pare si!
     // let ciao = 'ciao'; console.log(ciao[0]); risultato = c!!!!!
 
-    const userWord = prompt('Inserisci una parola');
+    
 
     function palindromeTester(wordToTest){
     
@@ -36,16 +36,19 @@
         }
         // se la parola è uguale, return di 'è palindroma', oppure return di 'true' da con altro if
         if (resultTest === true){
-            return `${wordToTest} è palindroma!`;
+            return `${wordToTest} è una parola palindroma!`;
         } else{
-            return `${reversedWord} non è il contrario di ${wordToTest}!`
+            return `${reversedWord} non è il contrario di ${wordToTest}, non è una parola palindroma!`
         }
 
     }
+
     
-    let result = palindromeTester(userWord);
+    const userWord = prompt('Inserisci una parola');
+
+    const result = palindromeTester(userWord);
     
-    let printInDom = document.getElementById('print');
+    const printInDom = document.getElementById('print');
 
     printInDom.innerHTML = `${result}`;
     
