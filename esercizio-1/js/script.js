@@ -6,13 +6,20 @@
 
 function palindromeTester(wordToTest){
 
-    // salvo la parola in un array
-    let wordArray = [];
-    wordArray.push(wordToTest);
-    return ( `${wordArray}`);
+    // salvo la parola in un array 
+    // rompo la parola in più pezzi SENZA METODO SPLIT, 
+    // let wordArray = [];
+    // wordArray.push(wordToTest);
+    // return ( `${wordArray}`);
+    // ma come? le stringhe possono essere divise come un array? A quanto pare si!
+    // let ciao = 'ciao'; console.log(ciao[0]); risultato = c!!!!!
 
-    // rompo la parola in più pezzi SENZA METODO SPLIT
     // in un for, riordino la parola al contrario, eseguo quindi il for con i--
+    for (let index = wordToTest.length-1; index > 0; index--) {
+        const element = wordToTest[index];
+        console.log(element);
+        
+    }
     // salvo le lettere in un secondo array
     // unisco le parole in un'unica stringa
     // faccio una comparazione tra la parola iniziale nel primo array ed il secondo
@@ -20,9 +27,7 @@ function palindromeTester(wordToTest){
 
 }
 
-// let result = palindromeTester(userWord);
+let result = palindromeTester('ciao');
 // console.log(result);
 
 
-let ciao = 'ciao';
-console.log(ciao[0])
