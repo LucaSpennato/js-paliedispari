@@ -52,3 +52,4 @@
 
     printInDom.innerHTML = `${result}`;
     
+    // da provare: while, seconda lettera è uguale a penultima allora è palindroma
