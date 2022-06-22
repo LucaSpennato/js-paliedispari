@@ -8,18 +8,45 @@
 
 function evenOrOdd(selectedEO, numbers){
 
-    if(((selectedEO) === ('pari')) && (!(numbers % 2) && !(isNaN(numbers)) ) ){
-        return 1;
-    } else if ((selectedEO) === ('dispari') && ((numbers % 2)) && !(isNaN(numbers)) ){
-        return 2;
+    numbers = parseInt(numbers);
+    
+    let contidion;
+    // controllo del pari o dispari, se numero pari è effettivamente pari, ed anche un numero e non una stringa, vai a avanti, lo stesso per dispari
+    if(((selectedEO) === ('pari')) && (!(numbers % 2) && !(isNaN(numbers)) && (numbers < 5) ) ){      
+        contidion = true;
+    } else if ((selectedEO) === ('dispari') && ((numbers % 2)) && !(isNaN(numbers)) && (numbers <= 5) ){
+        contidion = false;
     } else{
         return 'Hai sbagliato ad inserire qualocosa, inserisci pari ed un numero pari, se dispari un numero dispari!';
     }
-    
-    
 
+    let computerRandNum = (Math.floor(Math.random() * 5) ); 
+    let sum = numbers + computerRandNum;
+    if(sum % 2){
+        return 'Hai vinto, la somma è pari!';
+    } else{
+        return 'Hai perso, la somma è dispari!';
+    }
 }
 
-let result =  evenOrOdd('dispari', '3');
+let askIfevenOrOdd = prompt('Scegli pari o dispari!');
+let askNumber = parseInt(prompt('Scegli un numero pari se hai scelto pari, altrimenti dispari'));
+let result =  evenOrOdd(askIfevenOrOdd, askNumber);
 console.log(result);
 
+// let computerRandNum = (Math.floor(Math.random() * 5) ); 
+// // NUMERO RANDOMICO DISPARI, NON MIO MERITO!
+// if(!(computerRandNum %2 === 0)){
+//     if(computerRandNum === 5){
+//         computerRandNum = computerRandNum - 1 ;}
+// }else{
+//     computerRandNum = computerRandNum +1 ;
+// }
+
+// numeri random pari
+// if((computerRandNum %2 === 0)){
+//     if(computerRandNum === 5){
+//         computerRandNum = computerRandNum - 1 ;}
+// }else{
+//     computerRandNum = computerRandNum +1 ;
+// }
