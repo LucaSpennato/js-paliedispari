@@ -15,7 +15,7 @@ function palindromeTester(wordToTest){
     // let ciao = 'ciao'; console.log(ciao[0]); risultato = c!!!!!
 
     // in un for, riordino la parola al contrario, eseguo quindi il for con i--
-    for (let index = wordToTest.length-1; index > 0; index--) {
+    for (let index = wordToTest.length-1; index >= 0; index--) {
         const element = wordToTest[index];
         console.log(element);
         
